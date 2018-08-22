@@ -10,3 +10,8 @@ It is important to know that validating addresses with UPS does not increase the
 
 ## How Does the Customization Work?
 The core of the customization utilizes UPS’s API for street level validation. By using the Mongoose Framework we are able to use VB.NET as global scripts that make HTTP requests to UPS’s API. The global script handles the request and the response from UPS to validate parameters that have been passed in by the Syteline form.
+
+
+
+![GitHub Logo](https://i.imgur.com/g0HFKy5.png)
+
