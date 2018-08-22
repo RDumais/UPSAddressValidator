@@ -135,7 +135,7 @@ Namespace Mongoose.GlobalScripts
         Function getResponse(ByRef requestString As String)
 
             'Create a request using a URL that can receive a post. 
-            Dim request As WebRequest = WebRequest.Create("HTTPS://www.ups.com/ups.app/xml/XAV")
+            Dim request As WebRequest = WebRequest.Create("https://onlinetools.ups.com/ups.app/xml/XAV")
             request.Method = "POST"
 
             'Load the final completed template into an array for processing.
