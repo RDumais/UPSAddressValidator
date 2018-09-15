@@ -1,3 +1,7 @@
+'The '<Ref>' lines import references into WinStudio, may not be necessary.
+'//<Ref>System.Xml.dll</Ref>
+'//<Ref>System.Net.dll</Ref>
+
 Imports System
 Imports System.IO
 Imports System.Net
@@ -137,6 +141,10 @@ Namespace Mongoose.GlobalScripts
             'Create a request using a URL that can receive a post. 
             Dim request As WebRequest = WebRequest.Create("https://onlinetools.ups.com/ups.app/xml/XAV")
             request.Method = "POST"
+			
+			'If the following error is given during execution, uncomment the ServicePointManager line.
+			'"The request was aborted: Could not create SSL/TLS secure channel."
+			'ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12
 
             'Load the final completed template into an array for processing.
             Dim byteArray As Byte() = Encoding.UTF8.GetBytes(requestString)
