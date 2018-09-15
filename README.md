@@ -13,5 +13,15 @@ The core of the customization utilizes UPS’s API for street level validation. 
 
 
 
-![GitHub Logo](https://i.imgur.com/g0HFKy5.png)
+![Diagram](https://i.imgur.com/g0HFKy5.png)
 
+
+## Common Issues
+I have recently added a few comments into the 'LSC_UPSAddressValidation.vb' script that provide solutions to common issues of implementers. It appears to be different across syteline versions.
+
+#### 'The request was aborted: Could not create SSL/TLS secure channel.'
+Uncomment line #147 from 'LSC_UPSAddressValidation.vb' 'ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12'
+
+#### 'Namespace or type specified in the Imports ‘System.Xml’ doesn’t contain any public member or cannot be found.'
+![Diagram](https://i.imgur.com/harZmiS.png)
+Lines 2 + 3 should resolve this issue in 'LSC_UPSAddressValidation.vb', if they are giving you issue remove lines 2 + 3 entirely.
