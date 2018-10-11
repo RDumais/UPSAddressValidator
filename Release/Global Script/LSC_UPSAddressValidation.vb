@@ -238,13 +238,8 @@ Namespace Mongoose.GlobalScripts
                 ThisForm.CallGlobalScript("MsgApp", "Clear", "OK -Q", "ReturnAction", "m%1", validText, "", "", "", "", "", "", "", "", "", "", "", "", "", "", "")
             End If
 
-
-
-
             'If the user wants to format the address, proceed.
             If format = 0 Then
-
-
 
                 'Check if each field is read only, if not format and mark the component as modified.
                 If ThisForm.Components(streetComponentName).Enabled Then
